@@ -1,12 +1,14 @@
 # Sentiment-analysis-of-streaming-tweets
 It is a software built on python 2.7 used for sentiment analysis of streaming tweets.
 
-##Following are the packages required for the software:
+## Following are the packages required for the software:
+```
 1. Scikit-learn
 2. yweather
 3. Pickle
-##To run:
 ```
+
+## To run:
 1. Download 
     * [Sentiments](https://drive.google.com/open?id=0B_fxbKBLK7RXbmxTYnM3dHV1ZGs) 
     * [Tweets](https://drive.google.com/open?id=0B_fxbKBLK7RXcWJSYjRfS0dpTUk)
@@ -16,5 +18,5 @@ It is a software built on python 2.7 used for sentiment analysis of streaming tw
      * [Connect your app to Twitter](https://auth0.com/docs/connections/social/twitter)
 5. Paste the keys and tokens in twitter_streaming.py
 6. In shell type "python main(streaming).py" without quotes.
-```
-###Happy sentiment analysing!!!
+
+### Happy sentiment analysing!!!
