@@ -17,6 +17,6 @@ It is a software built on python 2.7 used for sentiment analysis of streaming tw
 4. Follow the tutorial give in the following link for creating and getting tokens and keys.
      * [Connect your app to Twitter](https://auth0.com/docs/connections/social/twitter)
 5. Paste the keys and tokens in twitter_streaming.py
-6. In shell type "python main(streaming).py" without quotes.
+6. In shell type "**python main(streaming).py**" without quotes.
 
 ### Happy sentiment analysing!!!
