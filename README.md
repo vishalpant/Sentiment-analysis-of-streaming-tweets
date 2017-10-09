@@ -4,8 +4,9 @@ It is a software built on python 2.7 used for sentiment analysis of streaming tw
 ## Following are the packages required for the software:
 ```
 1. Scikit-learn
-2. yweather
-3. Pickle
+2. Tweepy
+3. yweather
+4. Pickle
 ```
 
 ## To run:
