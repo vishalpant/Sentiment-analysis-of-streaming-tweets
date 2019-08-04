@@ -5,12 +5,12 @@ import pickle
 def load_data(name, delimiter, quotechar, datacolumn, weightcolumn):
     read = open(name)
     reader = csv.reader(read, delimiter=delimiter, quotechar=quotechar)
-    reader.next()
+    next(reader)
     data = []
     target = []
     for row in reader:
         if row[datacolumn] and row[weightcolumn]:
-            data.append(row[datacolumn].decode("utf-8", "ignore"))
+            data.append(str(row[datacolumn]))
             target.append(row[weightcolumn])
     return data,target
 
