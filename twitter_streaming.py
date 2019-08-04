@@ -16,7 +16,7 @@ def get_data(track, number=100):
     tweets = []
     sentiment = []
     for tweet in Cursor(api.search, q=track, count=20, result_type="recent", include_entities=True, lang="en").items(number):
-        print tweet.created_at, tweet.text
+        print(tweet.created_at, tweet.text)
         tweets.append(tweet.text)
         sentiment.append(tweet.text)
     return tweets, sentiment
@@ -29,5 +29,5 @@ def get_trendy(woeid):
     return api.trends_place(woeid)
 
 if __name__ == '__main__':
-    track, number = raw_input("Enter track and number of tweets(comma separated)").split(",")
+    track, number = input("Enter track and number of tweets(comma separated)").split(",")
     get_data(str(track), int(number))

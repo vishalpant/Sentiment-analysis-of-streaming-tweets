@@ -5,7 +5,7 @@ import os
 
 if __name__ == '__main__':
     if not os.path.isfile("sentiments.pickle") or not os.path.isfile("tweets.pickle"):
-        datafile = str(raw_input("Enter path of training data(Should be in .csv)"))
+        datafile = str(input("Enter path of training data(Should be in .csv)"))
         #replace 4th parameter with the column number of your tweets
         #replace 5th parameter with the column number of your sentiments
         data, target = load.load_data(datafile, ",", '"', 5, 0)
@@ -14,7 +14,7 @@ if __name__ == '__main__':
     else:
         data = load.load_tweets()
         target = load.load_sentiments()
-    data.append(str(raw_input("Enter a tweet:")))
+    data.append(str(input("Enter a tweet:")))
     target.append(0)
     tf_idf = Filter.filter(data)
     classifier = Sentiment.learn(tf_idf[:len(data)-2], target[:len(target)-2])
@@ -22,8 +22,8 @@ if __name__ == '__main__':
     #sentiment greater than 2 is positive, less than 2 is negative and equal to 2 is neutral.
     #Update if have different type
     if int(prediction[0]) > 2:
-        print "positive"
+        print("positive")
     elif int(prediction[0]) < 2:
-        print "Negative"
+        print("Negative")
     else:
-        print "Neutral"
+        print("Neutral")

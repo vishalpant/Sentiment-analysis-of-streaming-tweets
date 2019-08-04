@@ -7,13 +7,13 @@ from sklearn.metrics import accuracy_score
 
 
 def evaluate_model(target_true,target_predicted):
-    print classification_report(target_true,target_predicted)
-    print "The accuracy score is {:.2%}".format(accuracy_score(target_true,target_predicted))
+    print(classification_report(target_true,target_predicted))
+    print("The accuracy score is {:.2%}".format(accuracy_score(target_true,target_predicted)))
 
 
 if __name__ == "__main__":
     if not os.path.isfile("sentiments.pickle") or not os.path.isfile("tweets.pickle"):
-        datafile = str(raw_input("Enter path of training data(Should be in .csv)"))
+        datafile = str(input("Enter path of training data(Should be in .csv)"))
         # replace 4th parameter with the column number of your tweets
         # replace 5th parameter with the column number of your sentiments
         data, target = load.load_data(datafile, ",", '"', 5, 0)
