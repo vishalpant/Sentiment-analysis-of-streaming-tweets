@@ -6,7 +6,6 @@ It is a software built on python 2.7 used for sentiment analysis of streaming tw
 1. Scikit-learn
 2. Tweepy
 3. yweather
-4. Pickle
 ```
 
 ## How to run the sentiment analysis on streaming tweets?
